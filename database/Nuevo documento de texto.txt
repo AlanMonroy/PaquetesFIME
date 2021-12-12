@@ -1,0 +1,16 @@
+"""Acount=0
+                        for Arow in self.recogerinformacion:
+                            Acount+=1
+                        if Acount == 1:
+                            for y in self.recogerinformacion:
+                                VaLoR0= y[0]; VaLoR1= y[1]; VaLoR2= y[2]; VaLoR3= y[3]; VaLoR4= y[4]; VaLoR5= y[5]; VaLoR6= y[6]; VaLoR7= y[7]; VaLoR8= y[8]; VaLoR9= y[9];VaLoR10= y[10]
+                            self.db.cursor.execute(f"INSERT INTO Agrupacion (Plan, Carrera, Turno,id_primer_materia) VALUES ('{VaLoR1}','{VaLoR4}','{VaLoR8}','{VaLoR0}')")
+                            self.db.cursor.commit()
+                            self.info_agrupaciones=self.db.cursor.execute(f"SELECT * FROM Agrupacion").fetchall()
+                            for a in self.info_agrupaciones: #Conseguir la info de agrupaciones
+                                VALORC0 = a[0]   #ID DEL GRUPO
+                                VALORC4 = a[4]   # ID DE LA MATERIA CON LA QUE SE DIO DE ALTA LA AGRUPACION
+
+                                if int(VaLoR0) == int(VALORC4):
+                                    self.db.cursor.execute(f"INSERT INTO Grupos_ordenados (Grupo_asignado,Plan, Clave,Materia, Carrera, Semestre, Empleado, Hora,Turno,Dias,Salon) VALUES ('{VALORC0}','{VaLoR1}','{VaLoR2}','{VaLoR3}', '{VaLoR4}', '{VaLoR5}', '{VaLoR6}', '{VaLoR7}', '{VaLoR8}','{VaLoR9}','{VaLoR10}')")
+                                    self.db.cursor.commit()"""
